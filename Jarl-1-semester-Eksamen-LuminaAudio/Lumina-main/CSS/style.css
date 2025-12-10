@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.cutive-mono-regular {
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Libertinus+Keyboard&display=swap");
+
+body {
+  /* Skrifttype og størrelse */
+  font-family: "Cutive Mono", monospace;
+  font-size: 1.5rem;
+  background-color: #f0eae2;
+}
+
+.top-nav {
+  width: 100%;
+  background-color: #8d664f; /* ÆNDRING: skiftet farven på menu punkterne */
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around; /* ÆNDRING: Fra space-between til space-around for plads rundt om elementerne */
+  align-items: center;
+  padding: 0 32px; /* Luft til kanterne */
+  gap: 0; /* Fjern stort hul */
+}
+
+.nav-left,
+.nav-right {
+  display: flex; /* ÆNDRING: satte tekst og iconer på en row i navigationsbaren ved hjælp af "display-flex" og "flex-direction" */
+  flex-direction: row;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0 8px; /* Mindre padding */
+}
+
+.topnav-logo {
+  height: 20px;
+  max-height: 20px;
+  width: auto;
+  max-width: 40px;
+  vertical-align: middle;
+  margin-right: 8px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+body {
+  margin-top: 40px; /* Samme som nav-højde */
+}
+
+/* Style for main menu */
+/*main menu: gennemsigtig og overpå hero*/
+
+.main-menu {
+  position: fixed; /* ÆNDRING: skiftede fra absolute til fixed, hvilket gør at headeren forbliver in place hele tiden */
+  display: flex; /* ÆNDRING: her er der indsat en "display: flex;", "align-items" og "justify-content" som har jeg brugt til at justere placeringen iconer og menu punkter i headeren */
+  align-items: center;
+  justify-content: space-between;
+  top: 40px; /*lige under top-nav */
+  left: 0;
+  width: 100%;
+  background: #f0eae2; /* Gennemsigtig sort baggrund */
+  z-index: 1100;
+  padding: 1em; /* ÆNDRING: her har jeg ændret fra 64px til 1em som er en variabel, i forhold til skærmstørrelse */
+}
+
+.main-menu ul {
+  display: flex;
+  gap: 96px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu li a {
+  color: #8d664f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 32px 48px;
+  border-radius: 16px;
+}
+
+.main-menu li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ÆNDRING: her er der ændret billed størrelse på iconer og logo i headeren til 60% */
+.main-menu img {
+  width: 60%;
+}
+
+/* Style for header */
+.main-header {
+  width: 100%;
+  min-height: 800px;
+  background: url("../Images/LuminaBaggrundEksamen.png") no-repeat center
+    center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header-content {
+  background: none;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+/* style for menupunkter */
+/* ÆNDRING: Flyttet Køb nu knappen til højre */
+.shop-now-button {
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+  padding: 48px 62px;
+  border-radius: 48px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #e4c6a0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  border: 2px solid #e4c6a0; /* evt. kant for synlighed */
+}
+
+/* DEL MUSIKKEN KNAP*/
+.shop-now-button:hover {
+  background: rgb(240, 234, 226); /* Lidt mindre gennemsigtig ved hover */
+  color: #fff;
+}
+
+/* PRODUKTBÆLTE */
+
+.products {
+  margin: 100px auto;
+  text-align: center;
+}
+
+.products-title {
+  font-size: 1em;
+  margin-bottom: 48px;
+  color: #8d664f;
+}
+
+.products-row {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  width: 100%;
+  margin: 80px auto;
+}
+
+.product-card {
+  background: #d9d2c8; /* ÆNDRING: Skiftede Farven */
+  flex: 1 1 0;
+  min-width: 0; /* Sikrer at kortene kan skaleres ned */
+  max-width: 100%; /* Maksimal bredde for kortene */
+  border-radius: 10px;
+  padding: 32px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-card p {
+  color: #8d664f;
+  font-weight: 300; /* Tyndere end normal */
+  font-size: small;
+}
+
+/* ÆDNRING: Indsat boks til titel og pris på alle produkter */
+.pris-boks {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #f0eae2;
+  border-radius: 30px;
+}
+
+/* ÆNDRING: textboks */
+.amalieogsofie {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 80px;
+  border-radius: 30px;
+  color: #e4c6a0;
+  background-color: #8d664f;
+}
+
+/* ÆNDRING: plads rundt om text */
+#luminahistorie {
+  padding: 80px;
+}
+
+/* Tilbehør produkter sektion */
+.featured-products {
+  margin: 100px auto;
+  text-align: center;
+}
+
+-featured-title {
+  font-size: 2em;
+  color: #8d664f;
+}
+
+.featured-subtitle {
+  font-size: 1.2em;
+  color: #8d664f;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.featured-row {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-card {
+  background: #d9d2c8; /* ÆNDRING: Skiftede farven */
+  flex: 1 1 0;
+  min-width: 0; /* Sikrer at kortene kan skaleres ned */
+  max-width: 100%; /* Maksimal bredde for kortene */
+  border-radius: 10px;
+  padding: 40px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.featured-card p {
+  color: #8d664f;
+  font-weight: 300; /* Tyndere end normal */
+  font-size: small;
+}
+
+/* Style for Instagram sektion */
+.instagram-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0; /* Ingen mellemrum mellem billederne */
+  margin: 80px auto;
+  max-width: 1200px; /* Maksimal bredde for kolonnen */
+}
+
+.row-instagram {
+  width: 25%; /* Hvert billede tager 25% af bredden */
+  height: auto;
+  object-fit: cover; /* Billederne dækker deres container */
+  border-radius: 10px;
+  display: block;
+}
+
+/* ÆNDRING: Footer design */
+.footersektion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  color: #e4c6a0;
+  background-color: #8d664f;
+}
+/* Gjort max bredde på billeder til 200px i footer, så logo og trustpilot fylder lige meget*/
+.footersektion img {
+  max-width: 200px;
+}
